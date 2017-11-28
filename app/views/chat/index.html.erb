@@ -1,0 +1,12 @@
+<h1>Chat#index</h1>
+<div id="messages">
+  <% @messages.each do |message| %>
+    <%# TODO: MessageDecorator %>
+    <div class="message old"><p><%= message.render_message %></p></div>
+  <% end %>
+</div>
+
+<form id="message_form">
+  <input type="text" name="message" id="message_field">
+  <input type="submit" id="post_message">
+</form>
